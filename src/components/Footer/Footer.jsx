@@ -107,9 +107,9 @@ const Footer = () => {
                     <div className="md:col-span-2 text-white">
                         <h3 className="text-white font-medium mb-6 text-xl">Social Links</h3>
                         <ul className='flex gap-2'>
-                            <li><img src={Facebook} alt="" srcset="" /></li>
-                            <li><img src={Twitter} alt="" srcset="" /></li>
-                            <li><img src={Instagram} alt="" srcset="" /></li>
+                            <li><img src={Facebook} alt="" /></li>
+                            <li><img src={Twitter} alt="" /></li>
+                            <li><img src={Instagram} alt=""/></li>
                         </ul>
                         
                     </div>

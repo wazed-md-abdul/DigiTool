@@ -33,12 +33,6 @@ const Banner = () => {
               Watch Demo
             </button>
           </div>
-
-          {/* <div className="flex items-center gap-8 text-sm text-zinc-600 pt-6">
-            <div>✓ 50+ Frontier Models</div>
-            <div>✓ No Usage Limits</div>
-            <div>✓ Cancel Anytime</div>
-          </div> */}
         </div>
 
         {/* Right Image */}

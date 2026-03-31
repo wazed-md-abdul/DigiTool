@@ -1,54 +1,5 @@
-import { useState } from "react";
+import { use, useState } from "react";
 
-const plans = [
-  {
-    name: "Starter",
-    tagline: "Perfect for getting started",
-    price: 0,
-    unit: "/Month",
-    features: [
-      "Access to 10 free tools",
-      "Basic templates",
-      "Community support",
-      "1 project per month",
-    ],
-    cta: "Get Started Free",
-    highlighted: false,
-  },
-  {
-    name: "Pro",
-    tagline: "Best for professionals",
-    price: 29,
-    unit: "/Month",
-    badge: "Most Popular",
-    features: [
-      "Access to all premium tools",
-      "Unlimited templates",
-      "Priority support",
-      "Unlimited projects",
-      "Cloud sync",
-      "Advanced analytics",
-    ],
-    cta: "Start Pro Trial",
-    highlighted: true,
-  },
-  {
-    name: "Enterprise",
-    tagline: "For teams and businesses",
-    price: 99,
-    unit: "/Month",
-    features: [
-      "Everything in Pro",
-      "Team collaboration",
-      "Custom integrations",
-      "Dedicated support",
-      "SLA guarantee",
-      "Custom branding",
-    ],
-    cta: "Contact Sales",
-    highlighted: false,
-  },
-];
 
 const CheckIcon = ({ highlighted }) => (
   <svg
@@ -65,11 +16,15 @@ const CheckIcon = ({ highlighted }) => (
 );
 
 const PricingCard = ({ plan }) => {
-  const { name, tagline, price, unit, badge, features, cta, highlighted } = plan;
+
+
+  let { name, tagline, price, unit, badge, features, cta, highlighted } = plan;
+    const [intial,set]=useState(false);
+    highlighted= intial;
 
   return (
-    <div
-      className={`relative flex flex-col rounded-2xl p-8 transition-transform duration-300 hover:-translate-y-1 ${
+    <div onClick={() => set(!intial)}
+      className={`relative flex flex-col rounded-2xl p-8 transition-transform duration-600 hover:-translate-y-1 ${
         highlighted
           ? "bg-gradient-to-b from-purple-600 to-purple-700 text-white shadow-2xl shadow-purple-300 scale-105"
           : "bg-white border border-gray-200 text-gray-800 shadow-sm"
@@ -128,7 +83,10 @@ const PricingCard = ({ plan }) => {
   );
 };
 
-export default function PricingSection() {
+export default function PricingSection({plan}) {
+  const plans = plan;
+
+  
   return (
     <section className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6 py-20">
       {/* Header */}

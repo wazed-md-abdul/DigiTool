@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "badge": "Best Seller",
+    "image": "../src/assets/pdftool.png",
+    "title": "PDF Converter Pro",
+    "description": "Convert PDFs to Word, Excel, PNG and more formats instantly with no quality loss.",
+    "price": 15,
+    "features": [
+      "20+ file format support",
+      "Batch conversion",
+      "Cloud storage integration"
+    ]
+  },
+  {
+    "id": 2,
+    "badge": "New",
+    "image": "../src/assets/bgremover.png",
+    "title": "Background Remover",
+    "description": "Remove image backgrounds in one click with pixel-perfect AI precision every time.",
+    "price": 12,
+    "features": [
+      "Unlimited image processing",
+      "HD quality output",
+      "Transparent PNG export"
+    ]
+  },
+  {
+    "id": 3,
+    "badge": "Popular",
+    "image": "../src/assets/qrcode.png",
+    "title": "QR Code Generator",
+    "description": "Create custom branded QR codes for links, menus, contacts, and payments in seconds.",
+    "price": 9,
+    "features": [
+      "Custom colors & logo",
+      "Dynamic QR codes",
+      "Scan analytics"
+    ]
+  },
+  {
+    "id": 4,
+    "badge": "Hot",
+    "image": "../src/assets/invoice.png",
+    "title": "Invoice Builder",
+    "description": "Generate clean professional invoices and send them to clients in under 60 seconds.",
+    "price": 18,
+    "features": [
+      "Custom branding & logo",
+      "Auto tax calculation",
+      "PDF & email delivery"
+    ]
+  },
+  {
+    "id": 5,
+    "badge": "Top Rated",
+    "image": "../src/assets/colorplate.png",
+    "title": "Color Palette Studio",
+    "description": "Generate beautiful color palettes from images, hex codes, or AI mood-based suggestions.",
+    "price": 11,
+    "features": [
+      "AI palette generator",
+      "Export to CSS & Figma",
+      "Accessibility contrast check"
+    ]
+  },
+  {
+    "id": 6,
+    "badge": "Limited",
+    "image": "../src/assets/screenrec.png",
+    "title": "Screen Recorder",
+    "description": "Record your screen, webcam, or both with one click and share instantly via link.",
+    "price": 21,
+    "features": [
+      "4K recording quality",
+      "Built-in video trimmer",
+      "Instant shareable link"
+    ]
+  }
+]
