@@ -19,7 +19,7 @@ const PricingCard = ({ plan }) => {
 
 
   let { name, tagline, price, unit, badge, features, cta, highlighted } = plan;
-    const [intial,set]=useState(false);
+    const [intial,set]=useState(name === "Pro");
     highlighted= intial;
 
   return (
@@ -84,7 +84,7 @@ const PricingCard = ({ plan }) => {
 };
 
 export default function PricingSection({plan}) {
-  const plans = plan;
+  const plans = use(plan);
 
   
   return (

@@ -8,35 +8,37 @@ import PricingSection from './components/PricingSection/PricingSection.jsx'
 import StepsSection from './components/StepsSection/StepsSection.jsx'
 import ModelSection from './components/ModelSection/ModelSection.jsx'
 import './App.css'
+import { ToastContainer } from 'react-toastify';
 
 import React from 'react';
-
-import { ToastContainer, toast } from 'react-toastify';
-
 const res = await fetch('/plan.json');
-const plan = await res.json();
+const plan =res.json();
 
 
     const res2 = await fetch('/tools.json');
-    const data = await res2.json();
+  const data = res2.json();  
 
 
 function App() {
+const dataPromise = data;
 
+  const [carts, setCarts] = useState([]);
+  
+  const length = carts.length
 
 
 
   return (
     <>
-      <NavBar />
+      <NavBar length={length} />
       <Banner />
       <Reviewsection />
-      <Suspense fallback={<span class="loading loading-spinner text-primary"></span>} > <ModelSection data={data}></ModelSection></Suspense>
-      
+      <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} > <ModelSection  dataPromise={dataPromise}  carts={carts} setCarts={setCarts} ></ModelSection></Suspense>
       <StepsSection />
-      <Suspense fallback={<span class="loading loading-spinner text-primary"></span>} > <PricingSection plan={plan} /></Suspense>
+      <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} > <PricingSection plan={plan} /></Suspense>
       <Explore />
       <Footer />
+      <ToastContainer />
     </>
   );
 }

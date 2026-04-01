@@ -1,5 +1,20 @@
 import React from 'react'
-export default function ProductCard({tool}) {
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+export default function ProductCard({tool,carts,setCarts}) {
+ 
+  const isInCart = carts.some(item => item.id === tool.id);
+
+  const handleClick = () => {
+    if (isInCart) {
+      toast.error("Item already in the cart");
+      return;
+    }
+    setCarts([...carts, tool]);
+    toast.success("Item added to cart!");
+  };
+
   const dynamicColor = () =>{
     if(tool.badge === "New"){
       return "bg-green-200 text-green-600";
@@ -52,7 +67,7 @@ export default function ProductCard({tool}) {
        
         {tool.features.map((feature) => (
              <li className="flex items-center gap-2 text-sm text-gray-600">
-          <svg className="w-4 h-4 text-purple-600 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="w-4 h-4 text-purple-600 shrink-0" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
          {feature}
@@ -61,8 +76,16 @@ export default function ProductCard({tool}) {
       </ul>
 
       {/* CTA Button */}
-      <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-full transition-colors duration-200">
-        Buy Now
+      <button 
+        onClick={handleClick} 
+        disabled={isInCart}
+        className={`w-full font-semibold py-3 rounded-full transition-colors duration-200 ${
+          isInCart 
+            ? 'bg-gray-400 text-gray-700 cursor-not-allowed' 
+            : 'bg-purple-600 hover:bg-purple-700 text-white'
+        }`}
+      >
+        {isInCart ? 'Subscribed' : 'Buy Now'}
       </button>
 
     </div>

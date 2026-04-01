@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import NavBar from '../Navbar/NavBar';
+import CartSection from '../CartSection/CartSection';
+const ModelSection = ({ dataPromise, carts, setCarts }) => {
 
-const ModelSection = ({ data }) => {
+
+
+
+
+
+    const datas = use(dataPromise);
 
 
     const [activeTab, setActiveTab] = useState("model");
@@ -29,14 +37,17 @@ const ModelSection = ({ data }) => {
                     type="radio"
                     name="my_tabs_1"
                     className={`tab rounded-full w-50 ${activeTab === "cart" && "universalBgColor text-white"}`}
-                    aria-label={`Cart ()`}
+                    aria-label={`Cart (${carts.length})`}
                     onClick={() => setActiveTab("cart")}
                 />
             </div>
-            <div className='mt-20 items-center justify-center flex'>
+            <div className='mt-20 mx-auto'>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto ">
-                    {activeTab === "model" && data.map((tool) => <ProductCard key={tool.id} tool={tool} />)}
+                    {activeTab === "model" && datas.map((tool) => <ProductCard key={tool.id} tool={tool} setCarts={setCarts} carts={carts} />)}
+                    
                 </div>
+                 {activeTab === "cart" && <CartSection carts={carts} setCarts={setCarts} />}
+
             </div>
 
         </>
