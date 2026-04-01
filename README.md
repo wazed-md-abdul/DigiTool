@@ -31,13 +31,13 @@ DigiTool is a modern, responsive digital tool marketplace built with React and V
 ## 📸 Feature Preview
 
 ### Home Page
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page+Preview)
+![Home Page](/src/assets/homepage.png)
 
-### Cart Section
-![Cart Section](https://via.placeholder.com/800x400?text=Cart+Section+Preview)
+### Card Section
+![Card Section](/src/assets/Cards.png)
 
 ### Pricing Plans
-![Pricing Plans](https://via.placeholder.com/800x400?text=Pricing+Plans+Preview)
+![Pricing Plans](/src/assets/pricing.png)
 
 ## 📁 Project Structure
 
@@ -100,8 +100,7 @@ DigiTool/
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=wazed-md-abdul&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <br />
+ 
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=wazed-md-abdul&theme=radical" alt="GitHub Streak" />
 </div>
 
