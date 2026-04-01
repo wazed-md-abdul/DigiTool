@@ -31,23 +31,23 @@ DigiTool is a modern, responsive digital tool marketplace built with React and V
 ## 📸 Feature Preview
 
 ### Home Page
-![Home Page](/src/assets/homepage.png)
+![Home Page](./public/assets/homepage.png)
 
 ### Card Section
-![Card Section](/src/assets/Cards.png)
+![Card Section](./public/assets/Cards.png)
 
 ### Pricing Plans
-![Pricing Plans](/src/assets/pricing.png)
+![Pricing Plans](./public/assets/pricing.png)
 
 ## 📁 Project Structure
 
 ```
 DigiTool/
 ├── public/
+│   ├── assets/
 │   ├── plan.json
 │   └── tools.json
 ├── src/
-│   ├── assets/
 │   ├── components/
 │   │   ├── banner/
 │   │   ├── CartSection/
