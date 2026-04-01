@@ -2,7 +2,7 @@
   {
     "id": 1,
     "badge": "Best Seller",
-    "image": "../src/assets/pdftool.png",
+    "image": "/assets/pdftool.png",
     "title": "PDF Converter Pro",
     "description": "Convert PDFs to Word, Excel, PNG and more formats instantly with no quality loss.",
     "price": 15,
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "badge": "New",
-    "image": "../src/assets/bgremover.png",
+    "image": "/assets/bgremover.png",
     "title": "Background Remover",
     "description": "Remove image backgrounds in one click with pixel-perfect AI precision every time.",
     "price": 12,
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "badge": "Popular",
-    "image": "../src/assets/qrcode.png",
+    "image": "/assets/qrcode.png",
     "title": "QR Code Generator",
     "description": "Create custom branded QR codes for links, menus, contacts, and payments in seconds.",
     "price": 9,
@@ -41,7 +41,7 @@
   {
     "id": 4,
     "badge": "Hot",
-    "image": "../src/assets/invoice.png",
+    "image": "/assets/invoice.png",
     "title": "Invoice Builder",
     "description": "Generate clean professional invoices and send them to clients in under 60 seconds.",
     "price": 18,
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "badge": "Top Rated",
-    "image": "../src/assets/colorplate.png",
+    "image": "/assets/colorplate.png",
     "title": "Color Palette Studio",
     "description": "Generate beautiful color palettes from images, hex codes, or AI mood-based suggestions.",
     "price": 11,
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "badge": "Limited",
-    "image": "../src/assets/screenrec.png",
+    "image": "/assets/screenrec.png",
     "title": "Screen Recorder",
     "description": "Record your screen, webcam, or both with one click and share instantly via link.",
     "price": 21,

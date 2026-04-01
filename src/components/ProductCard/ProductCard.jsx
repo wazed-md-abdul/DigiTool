@@ -47,13 +47,13 @@ export default function ProductCard({tool,carts,setCarts}) {
 
       {/* Product Image */}
       <div className="mb-4">
-        <img src={tool.image} alt="AI Writing Pro" className="w-12 h-12 object-contain" />
+        <img src={tool.image} alt={tool.title} className="w-12 h-12 object-contain" />
       </div>
 
       {/* Title & Description */}
-      <h2 className="text-xl font-bold text-gray-900 mb-2">AI Writing Pro</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-2">{tool.title}</h2>
       <p className="text-sm text-gray-500 leading-relaxed mb-4">
-        {tool.title}
+        {tool.description}
       </p>
 
       {/* Price */}

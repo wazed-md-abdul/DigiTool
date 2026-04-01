@@ -1,4 +1,4 @@
-import BannerImage from "../../assets/banner.png";
+import BannerImage from "/assets/banner.png";
 import { Play } from "lucide-react";
 import './Banner.css'
 const Banner = () => {

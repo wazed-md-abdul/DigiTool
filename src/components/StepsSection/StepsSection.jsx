@@ -1,7 +1,7 @@
 import React from 'react'
-import Rocket from '../../assets/rocket.png'
-import User from '../../assets/user.png'
-import Package from '../../assets/package.png'
+import Rocket from '/assets/rocket.png'
+import User from '/assets/user.png'
+import Package from '/assets/package.png'
 
 const StepsSection =() => {
   return (
